@@ -39,7 +39,7 @@ button {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -112,5 +112,12 @@ button {
     }
     .top-text-box {
         margin-top: 32px;
+    }
+    .profile-img {
+        margin-left: 0px;
+    }
+    .top-text-box {
+        margin-left: 0px;
+        text-align: center;
     }
 }
