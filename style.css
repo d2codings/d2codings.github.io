@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f7f9fc;
+    padding: 10%;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+input, textarea, button {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+p, h1, button {
+    transform: rotate(0.04deg);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+button {
+    background-color: #6fbaf8;
+    border: none;
+    color: white;
+    padding: 4px 24px 4px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.top-box {
+    background-color: white;
+    padding: 32px;
+    box-shadow: 0px 0px 10px rgb(235, 235, 235);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-img img {
+    box-shadow: 0px 0px 10px rgb(235, 235, 235);
+}
+
+.profile-img {
+    display: flex;
+    float: left;
+    margin-left: 12px;
+}
+
+.top-text-box {
+    float: left;
+    margin-left: 24px;
+    text-shadow: 0px 0px 10px rgb(220, 220, 220);
+}
+
+.top-text-box h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.top-text-box p {
+    margin-top: 4px;
+}
+
+.middle-text-box {
+    flex-grow: 1;
+}
+
+.bottom-text-box p {
+    text-shadow: 0px 0px 10px rgb(220, 220, 220);
+}
+
+.item-title {
+    float: left;
+    font-weight: 600;
+}
+
+.item-title p {
+    margin: 12px;
+}
+
+.item-content p {
+    margin: 12px;
+}
+
+.item-content {
+    float: left;
+    margin-left: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .top-box {
+        flex-direction: column;
+    }
+    .bottom-text-box {
+        margin-top: 32px;
+    }
+    .top-text-box {
+        margin-top: 32px;
+    }
+}
