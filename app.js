@@ -1,46 +1,24 @@
-const startTime = document.getElementById("start-time");
-const endTime = document.getElementById("end-time");
+const startTime = document.getElementById("time");
 
-let toDay = new Date();
+function newTime() {
+    date1 = new Date("2022-04-18");
+    date2 = new Date();
 
-const year = 2022;
-const month = 4;
-const date = 18;
+    diffDate = date2.getTime() - date1.getTime();
 
-const hours = 17;
-const minutes = 6;
-const seconds = 0;
+    dateDays = Math.abs(diffDate / (1000 * 3600 * 24));
 
-let newYear = toDay.getFullYear(); 
+    dateDays = Math.floor(dateDays);
+};
 
-let newMonth = toDay.getMonth() + 1;
+function showTime() {
+    newTime();
+    startTime.innerHTML = `${dateDays} 일`;
+};
 
-let newDate = toDay.getDate();
+function init() {
+    showTime();
+    setInterval(showTime, 1000);
+};
 
-let newHours = toDay.getHours();
-
-let newMinutes = toDay.getMinutes();
-
-let newSeconds = toDay.getSeconds();
-
-startTime.innerHTML = `${newYear-year}년 ${newMonth-month}월 ${newDate-date}일`;
-endTime.innerHTML = `${newHours-hours}시 ${newMinutes-minutes}분 ${newSeconds-seconds}초`;
-
-setInterval(function() {
-    toDay = new Date();
-
-    let newYear = toDay.getFullYear(); 
-
-    let newMonth = toDay.getMonth() + 1;
-
-    let newDate = toDay.getDate();
-
-    let newHours = toDay.getHours();
-
-    let newMinutes = toDay.getMinutes();
-
-    let newSeconds = toDay.getSeconds();
-
-    startTime.innerHTML = `${newYear-year}년 ${newMonth-month}월 ${newDate-date}일`;
-    endTime.innerHTML = `${newHours-hours}시 ${newMinutes-minutes}분 ${newSeconds-seconds}초`;
-}, 1000);
+init();
